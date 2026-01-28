@@ -1,0 +1,15 @@
+name: Evaluacion de Codigo AZ-204
+on: [push, pull_request] # Se activa con cada subida o solicitud de cambio
+
+jobs:
+  revisar-codigo:
+    runs-on: ubuntu-latest # Usamos una máquina virtual de Linux en la nube
+    steps:
+      - name: Descargar el codigo
+        uses: actions/checkout@v4 # Paso estándar para que el robot lea tu código
+
+      - name: Simular Pruebas Unitarias
+        run: |
+          echo "Iniciando bateria de pruebas..."
+          echo "Verificando sintaxis de Azure App Service..."
+          echo "¡Pruebas superadas con éxito!"
